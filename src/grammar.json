@@ -1,0 +1,41 @@
+{
+  "name": "hex_colors",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "hex_color"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_other_text"
+          }
+        ]
+      }
+    },
+    "hex_color": {
+      "type": "PATTERN",
+      "value": "#[0-9a-fA-F]+"
+    },
+    "_other_text": {
+      "type": "PATTERN",
+      "value": "[^\\s]+"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
